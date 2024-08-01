@@ -1,4 +1,4 @@
-export const BACKEND_URL = 'https://post-me.herokuapp.com'
+export const BACKEND_URL = 'https://postme-backend.onrender.com'
 export const SIGNUP_URL = `${BACKEND_URL}/signup`
 export const SIGNIN_URL = `${BACKEND_URL}/signin`
 export const USERDATA_URL = `${BACKEND_URL}/usersecrets`
