@@ -6,7 +6,7 @@ import './Forms.css'
 const Signup = (props) => {
   var signUpEmail = null
   var signUpName = null
-  var signUpPhone = null
+  // var signUpPhone = null
   var signUpPassword = null
   var signUpConfirmPassword = null
 
@@ -18,9 +18,9 @@ const Signup = (props) => {
     signUpName = input
   }
 
-  const updatePhone = (input) => {
-    signUpPhone = input
-  }
+  // const updatePhone = (input) => {
+  //   signUpPhone = input
+  // }
 
   const updatePassword = (input) => {
     signUpPassword = input
@@ -42,7 +42,7 @@ const Signup = (props) => {
               .post(SIGNUP_URL, {
                 name: signUpName,
                 email: signUpEmail,
-                phone: signUpPhone,
+                // phone: signUpPhone,
                 password: signUpPassword,
               })
               .then((response) => {
@@ -81,13 +81,6 @@ const Signup = (props) => {
           <h1>Sign Up</h1>
           <form action='noaction.php'>
             <div className='form-group'>
-              {/* <TextField
-                id='standard-basic'
-                label='Full Name'
-                defaultValue='Virat Kohli'
-                onChange={(event) => updateName(event.target.value)}
-              /> */}
-
               <input
                 type='text'
                 name=''
@@ -96,63 +89,27 @@ const Signup = (props) => {
               />
             </div>
             <div className='form-group'>
-              {/* <TextField
-                id='standard-basic'
-                type='email'
-                label='Email'
-                defaultValue='virat@gmail.com'
-                onChange={(event) => updateEmail(event.target.value)}
-              />  */}
               <input
                 onChange={(event) => updateEmail(event.target.value)}
                 type='email'
-                placeholder='virat@gmail.com'
+                placeholder='Email'
                 className='input-field'
               />
             </div>
             <div className='form-group'>
-              {/* <TextField
-                id='standard-basic'
-                label='Phone Number'
-                defaultValue='+91xxxxxxxxx'
-                type='number'
-                onChange={(event) => updatePhone(event.target.value)}
-              /> */}
-              <input
-                onChange={(event) => updatePhone(event.target.value)}
-                type='tel'
-                placeholder='Phone Number'
-                className='input-field'
-              />
-            </div>
-            <div className='form-group'>
-              {/* <TextField
-                id='standard-basic'
-                label='Password'
-                defaultValue='More than 6 digits'
-                type='password'
-                onChange={(event) => updatePassword(event.target.value)}
-              /> */}
               <input
                 onChange={(event) => updatePassword(event.target.value)}
                 type='password'
                 className='input-field'
-                placeholder='6+ characters'
+                placeholder='Password'
               />
             </div>
             <div className='form-group'>
-              {/* <TextField
-                id='standard-basic'
-                label='Confirm Password'
-                defaultValue='More than 6 digits'
-                type='password'
-                onChange={(event) => updateConfirmPassword(event.target.value)}
-              /> */}
               <input
                 onChange={(event) => updateConfirmPassword(event.target.value)}
                 type='password'
                 className='input-field'
-                placeholder='6+ characters'
+                placeholder='Confirm Password'
               />
             </div>
 

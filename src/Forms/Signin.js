@@ -63,7 +63,7 @@ const Signin = (props) => {
                 className='input-2'
                 onChange={(event) => updateEmail(event.target.value)}
                 type='email'
-                placeholder='virat@gmail.com'
+                placeholder='Email'
               />
             </div>
             <div className='form-group'>
@@ -71,7 +71,7 @@ const Signin = (props) => {
                 className='input-2'
                 onChange={(event) => updatePassword(event.target.value)}
                 type='password'
-                placeholder='More than 6 character'
+                placeholder='Password'
               />
             </div>
             <button onClick={(event) => validate(event)} className='btn-2'>
